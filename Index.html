@@ -1,0 +1,71 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>Advinhador de Números</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="Css/style.css">
+  </head>
+  <body>
+    <div class="game-container">
+      <header>
+        <h1>Advinhador de Números!</h1>
+      </header>
+      
+      <div class="rounds">
+        <p class="round-label">Rodada <span id="round-number">1</span></p>
+        <p class="guess-label">Número Alvo: <span id="target-number">?</span></p>
+      </div>
+
+      <div class="guessing-area">
+        <div class="guess computer-guess">
+          <div class="guess-title">
+            <p class="guess-label">Computador</p>
+            <p class="score-label">Pontuação: <span id="computer-score">0</span></p>
+          </div>
+          <p id="computer-guess">?</p>
+          <p class="winning-text" id="computer-wins"></p>
+        </div>
+        <div class="guess human-guess">
+          <div class="guess-title">
+            <p class="guess-label">Você</p>
+            <p class="score-label">Pontuação: <span id="human-score">0</span></p>
+          </div>
+          <input type="number" id="human-guess" min=0 max=9 value=0>
+          <div class="number-controls">
+            <button class="number-control left" id="subtract" disabled>-</button>
+            <button class="number-control right" id="add">+</button>
+          </div>
+          <button class="button" id="guess">Fazer um Palpite</button>
+        </div>
+      </div>
+
+      <div class="next-round-container">
+        <button class="button" id="next-round" disabled>Próxima Rodada</button>
+      </div>
+
+    </div>
+    
+    <div class="instructions">
+      <div class="instruction">
+        <h3>Passo 1</h3>
+        <p>Insira um número entre 0 e 9</p>
+      </div>
+      <div class="instruction">
+        <h3>Passo 2</h3>
+        <p>Clique em "Fazer um Palpite" para enviar seu palpite e ver quem ganhou a rodada.</p>
+      </div>
+      <div class="instruction">
+        <h3>Passo 3</h3>
+        <p>Ganha quem acertar o número ou chegar mais perto.</p>
+      </div>
+      <div class="instruction">
+        <h3>Passo 4</h3>
+        <p>Clique em "Próxima Rodada" para jogar novamente.</p>
+      </div>
+    </div>
+
+    <script src="JS/script.js"></script>
+    <script src="JS/game.js"></script>
+  </body>
+</html>
